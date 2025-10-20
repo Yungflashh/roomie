@@ -1,0 +1,57 @@
+<mjml>
+  <mj-head>
+    <mj-title>{{subject}}</mj-title>
+    <mj-preview>{{preview}}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
+      <mj-text font-size="14px" color="#555555" line-height="20px"></mj-text>
+      <mj-section background-color="#ffffff"></mj-section>
+    </mj-attributes>
+    <mj-style inline="inline">
+      .link { color: #4F46E5; text-decoration: none; }
+      .link:hover { text-decoration: underline; }
+      .footer-link { color: #9CA3AF; text-decoration: none; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#F3F4F6">
+    <!-- Header -->
+    <mj-section background-color="#4F46E5" padding="20px">
+      <mj-column>
+        <mj-text align="center" color="#ffffff" font-size="24px" font-weight="bold">
+          🏠 Roommate Finder
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Content -->
+    <mj-section padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="16px" color="#1F2937">
+          Hi {{firstName}},
+        </mj-text>
+        
+        <!-- Dynamic Content Block -->
+        {{{content}}}
+        
+        <mj-text padding-top="30px" color="#6B7280" font-size="14px">
+          Best regards,<br/>
+          The Roommate Finder Team
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#F9FAFB" padding="30px 20px">
+      <mj-column>
+        <mj-text align="center" color="#9CA3AF" font-size="12px">
+          © {{year}} Roommate Finder. All rights reserved.
+        </mj-text>
+        <mj-text align="center" color="#9CA3AF" font-size="12px" padding-top="10px">
+          <a href="{{baseUrl}}/unsubscribe" class="footer-link">Unsubscribe</a> | 
+          <a href="{{baseUrl}}/privacy" class="footer-link">Privacy Policy</a> | 
+          <a href="{{baseUrl}}/terms" class="footer-link">Terms</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

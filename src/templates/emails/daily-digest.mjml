@@ -1,0 +1,49 @@
+<mj-text font-size="20px" font-weight="bold" color="#1F2937" padding-top="20px">
+  Your Daily Digest 📊
+</mj-text>
+
+<mj-text padding-top="20px">
+  Here's what happened while you were away:
+</mj-text>
+
+<mj-divider border-color="#E5E7EB" padding="30px 0"></mj-divider>
+
+<!-- New Matches -->
+<mj-text font-size="16px" font-weight="bold" color="#4F46E5">
+  💙 New Matches ({{newMatches}})
+</mj-text>
+<mj-text padding-top="10px">
+  {{#if hasNewMatches}}
+    You have {{newMatches}} new potential matches waiting for you!
+  {{else}}
+    No new matches today. Try updating your preferences.
+  {{/if}}
+</mj-text>
+
+<mj-divider border-color="#E5E7EB" padding="20px 0"></mj-divider>
+
+<!-- Messages -->
+<mj-text font-size="16px" font-weight="bold" color="#4F46E5">
+  💬 Unread Messages ({{unreadMessages}})
+</mj-text>
+<mj-text padding-top="10px">
+  {{#if hasUnreadMessages}}
+    You have {{unreadMessages}} unread messages. Don't keep them waiting!
+  {{else}}
+    You're all caught up! 🎉
+  {{/if}}
+</mj-text>
+
+<mj-divider border-color="#E5E7EB" padding="20px 0"></mj-divider>
+
+<!-- Profile Views -->
+<mj-text font-size="16px" font-weight="bold" color="#4F46E5">
+  👀 Profile Views ({{profileViews}})
+</mj-text>
+<mj-text padding-top="10px">
+  {{profileViews}} people viewed your profile today!
+</mj-text>
+
+<mj-button background-color="#4F46E5" color="#ffffff" href="{{dashboardUrl}}" padding-top="30px">
+  View Dashboard
+</mj-button>

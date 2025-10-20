@@ -1,0 +1,38 @@
+<mj-text font-size="20px" font-weight="bold" color="#1F2937" padding-top="20px">
+  Welcome to Roommate Finder! 🎉
+</mj-text>
+
+<mj-text padding-top="20px">
+  We're excited to have you join our community of roommate seekers!
+</mj-text>
+
+<mj-text padding-top="15px">
+  Your email has been verified, and you're all set to start finding your perfect roommate.
+</mj-text>
+
+<mj-text font-size="18px" font-weight="bold" padding-top="30px">
+  Here's what you can do next:
+</mj-text>
+
+<mj-text padding-top="15px">
+  <strong>1. Complete Your Profile</strong><br/>
+  Add photos, interests, and preferences to stand out and find better matches.
+</mj-text>
+
+<mj-text padding-top="10px">
+  <strong>2. Browse Matches</strong><br/>
+  Discover compatible roommates based on lifestyle, budget, and location.
+</mj-text>
+
+<mj-text padding-top="10px">
+  <strong>3. Play Games & Bond</strong><br/>
+  Break the ice with fun games and build connections before meeting!
+</mj-text>
+
+<mj-button background-color="#4F46E5" color="#ffffff" href="{{profileUrl}}" padding-top="30px">
+  Complete Your Profile
+</mj-button>
+
+<mj-text padding-top="30px" color="#6B7280" font-size="13px">
+  Need help getting started? Check out our <a href="{{baseUrl}}/guide" class="link">Getting Started Guide</a>
+</mj-text>

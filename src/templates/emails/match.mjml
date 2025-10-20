@@ -1,0 +1,32 @@
+<mj-text font-size="20px" font-weight="bold" color="#1F2937" padding-top="20px">
+  It's a Match! 🎉
+</mj-text>
+
+<mj-text padding-top="20px">
+  Great news! You've matched with <strong>{{matchName}}</strong>!
+</mj-text>
+
+<mj-text padding-top="15px">
+  Your compatibility score: <strong style="color: #10B981; font-size: 24px;">{{compatibilityScore}}%</strong>
+</mj-text>
+
+<mj-divider border-color="#E5E7EB" padding="30px 0"></mj-divider>
+
+<mj-text font-size="18px" font-weight="bold">
+  Why you're a great match:
+</mj-text>
+
+<mj-text padding-top="15px">
+  ✅ Similar budget range ({{budgetRange}})<br/>
+  ✅ Compatible lifestyles<br/>
+  ✅ Shared interests: {{sharedInterests}}<br/>
+  ✅ Same preferred location
+</mj-text>
+
+<mj-button background-color="#4F46E5" color="#ffffff" href="{{chatUrl}}" padding-top="30px">
+  Start Chatting
+</mj-button>
+
+<mj-text padding-top="20px" color="#6B7280" font-size="13px" align="center">
+  Don't forget to play an icebreaker game to get to know each other better!
+</mj-text>
