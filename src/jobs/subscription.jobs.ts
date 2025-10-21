@@ -2,6 +2,9 @@ import Queue from 'bull';
 import { Subscription } from '../models';
 import { logger } from '../utils/logger';
 import { StripeService } from '../services/stripe.service';
+import dotenv from "dotenv"
+
+dotenv.config()
 
 // Bull Queue with proper Redis auth
 const subscriptionQueue = new Queue('subscription-processing', {

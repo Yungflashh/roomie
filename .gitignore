@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Environment variables
@@ -9,7 +8,6 @@ yarn.lock
 .env.*.local
 
 # Build output
-dist/
 build/
 *.tsbuildinfo
 

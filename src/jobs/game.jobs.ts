@@ -1,6 +1,9 @@
 import Queue from 'bull';
 import { GameSession, UserGameStats } from '../models';
 import { logger } from '../utils/logger';
+import dotenv from "dotenv"
+
+dotenv.config()
 
 // Bull Queue with proper Redis auth
 const gameQueue = new Queue('game-processing', {
