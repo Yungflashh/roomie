@@ -8,6 +8,10 @@ import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from './config/swagger';
 import passport from './config/passport';
 import session from 'express-session';
+import { Request, Response, NextFunction } from 'express';
+import { validationResult, ValidationChain } from 'express-validator';
+import ApiError from '../src/utils/ApiError';
+
 
 // Import configurations
 import { connectDB } from './config/database';
@@ -102,6 +106,25 @@ app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   customCss: '.swagger-ui .topbar { display: none }',
   customSiteTitle: 'Roommate Finder API Docs',
 }));
+
+
+
+// global error 
+
+app.use((err:any, req:Request, res:Response, next:NextFunction) => {
+  console.error('Unhandled Error:', err);
+
+  if (err instanceof ApiError) {
+    return res.status(err.statusCode).json({
+      message: err.message,
+      errors: err.details || null,  // <-- send details if present
+    });
+  }
+
+  res.status(500).json({ message: 'Internal Server Error' });
+});
+
+
 
 // Swagger JSON
 app.get('/api/v1/docs.json', (req, res) => {

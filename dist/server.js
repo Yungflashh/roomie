@@ -14,6 +14,7 @@ const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const swagger_1 = require("./config/swagger");
 const passport_1 = __importDefault(require("./config/passport"));
 const express_session_1 = __importDefault(require("express-session"));
+const ApiError_1 = __importDefault(require("../src/utils/ApiError"));
 // Import configurations
 const database_1 = require("./config/database");
 const logger_1 = require("./utils/logger");
@@ -81,6 +82,17 @@ app.use('/api/v1/docs', swagger_ui_express_1.default.serve, swagger_ui_express_1
     customCss: '.swagger-ui .topbar { display: none }',
     customSiteTitle: 'Roommate Finder API Docs',
 }));
+// global error 
+app.use((err, req, res, next) => {
+    console.error('Unhandled Error:', err);
+    if (err instanceof ApiError_1.default) {
+        return res.status(err.statusCode).json({
+            message: err.message,
+            errors: err.details || null, // <-- send details if present
+        });
+    }
+    res.status(500).json({ message: 'Internal Server Error' });
+});
 // Swagger JSON
 app.get('/api/v1/docs.json', (req, res) => {
     res.setHeader('Content-Type', 'application/json');

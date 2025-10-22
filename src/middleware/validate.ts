@@ -16,6 +16,7 @@ export const validate = (validations: ValidationChain[]) => {
       message: err.msg,
     }));
 
-    throw new ApiError(400, 'Validation Error', true);
+    // Pass details to ApiError
+    return next(new ApiError(400, 'Validation Error', true, extractedErrors));
   };
 };

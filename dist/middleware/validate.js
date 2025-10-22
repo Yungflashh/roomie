@@ -17,7 +17,8 @@ const validate = (validations) => {
             field: err.type === 'field' ? err.path : undefined,
             message: err.msg,
         }));
-        throw new ApiError_1.default(400, 'Validation Error', true);
+        // Pass details to ApiError
+        return next(new ApiError_1.default(400, 'Validation Error', true, extractedErrors));
     };
 };
 exports.validate = validate;
