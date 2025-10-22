@@ -55,7 +55,14 @@ const httpServer = createServer(app);
 const socketService = new SocketService(httpServer);
 const io = socketService.getIO();
 
+
+
+// To trust proxy like render
+app.set('trust proxy', true);
+
+
 // Make io and socketService accessible to routes
+
 app.set('io', io);
 app.set('socketService', socketService);
 
