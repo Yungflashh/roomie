@@ -14,7 +14,7 @@ const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const swagger_1 = require("./config/swagger");
 const passport_1 = __importDefault(require("./config/passport"));
 const express_session_1 = __importDefault(require("express-session"));
-const ApiError_1 = __importDefault(require("../src/utils/ApiError"));
+const ApiError_1 = __importDefault(require("./utils/ApiError"));
 // Import configurations
 const database_1 = require("./config/database");
 const logger_1 = require("./utils/logger");
