@@ -58,7 +58,7 @@ const io = socketService.getIO();
 
 
 // To trust proxy like render
-app.set('trust proxy', true);
+app.set('trust proxy', 1); //  Trust only the first proxy (Render's proxy)
 
 
 // Make io and socketService accessible to routes
