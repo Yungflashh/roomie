@@ -1,8 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.esClient = exports.elasticsearchClient = void 0;
 const elasticsearch_1 = require("@elastic/elasticsearch");
 const logger_1 = require("../utils/logger");
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+console.log("it got here oop");
+console.log(process.env.ELASTICSEARCH_NODE);
 class ElasticsearchClient {
     constructor() {
         this.client = null;

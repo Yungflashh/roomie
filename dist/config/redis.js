@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.redis = exports.redisClient = void 0;
 const ioredis_1 = __importDefault(require("ioredis"));
 const logger_1 = require("../utils/logger");
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 class RedisClient {
     constructor() {
         this.client = null;

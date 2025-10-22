@@ -1,6 +1,16 @@
 import { Client } from '@elastic/elasticsearch';
 import { logger } from '../utils/logger';
 
+import dotenv from "dotenv"
+
+dotenv.config()
+
+
+console.log("it got here oop");
+
+console.log(process.env.ELASTICSEARCH_NODE);
+
+
 class ElasticsearchClient {
   private client: Client | null = null;
   private isConnected: boolean = false;

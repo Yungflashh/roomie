@@ -1,5 +1,10 @@
 import Redis from 'ioredis';
 import { logger } from '../utils/logger';
+import dotenv from "dotenv"
+
+
+dotenv.config()
+
 
 class RedisClient {
   private client: Redis | null = null;

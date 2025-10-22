@@ -1,6 +1,9 @@
 import { esClient, elasticsearchClient } from '../config/elasticsearch';
 import { logger } from '../utils/logger';
 import { RoommateProfile, User } from '../models';
+import dotenv from "dotenv"
+
+dotenv.config()
 
 interface SearchQuery {
   query: string;
